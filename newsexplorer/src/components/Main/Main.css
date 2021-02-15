@@ -1,0 +1,90 @@
+.main {
+    width: 100%;
+    height: auto;
+  }
+  
+  .main__background {
+    border: 1px solid transparent;
+    background-image: url("../../images/georgia.png");
+    width: 100%;
+    background-size: cover;
+    height: 576px;
+    background-repeat: no-repeat;
+    margin-top: -80px;
+    box-sizing: border-box;
+  }
+  
+  .main__heading {
+    font-family: "Roboto Slab", serif;
+    color: white;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px;
+    text-align: left;
+    width: 608px;
+    height: 128px;
+    margin: auto;
+    padding-top: 160px;
+    padding-bottom: 32px;
+  }
+  
+  .main__subheading {
+    font-family: "Roboto Regular";
+    color: white;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 608px;
+    margin: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .main__background {
+      height: 400px;
+    }
+    .main__heading {
+      font-size: 36px;
+      line-height: 40px;
+      width: 452px;
+      height: 80px;
+      padding-bottom: 16px;
+      padding-top: 104px;
+    }
+  
+    .main__subheading {
+      font-size: 18px;
+      width: 452px;
+    }
+  }
+  
+  @media screen and (max-width: 666px) {
+    .main__heading {
+      width: 400px;
+      height: 80px;
+    }
+  
+    .main__subheading {
+      width: 400px;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .main__background {
+      height: 536px;
+    }
+  }
+  @media screen and (max-width: 437px) {
+    .main__heading {
+      width: 285px;
+      padding-top: 96px;
+    }
+  
+    .main__subheading {
+      width: 285px;
+    }
+  }
+  
