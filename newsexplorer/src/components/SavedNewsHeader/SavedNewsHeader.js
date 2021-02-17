@@ -12,7 +12,7 @@ function SavedNewsHeader(props) {
       <h2 className="saved-news-header__counter">
         Elise, you have {props.cards.length} saved articles
       </h2>
-      <div className="saved-news-header__keywords">
+      <h3 className="saved-news-header__keywords">
         By keywords:
         <ul className="saved-news-header__keywords_items">
           {uniqueTags.slice(0, 2).map((item, i, arr) => (
@@ -27,7 +27,7 @@ function SavedNewsHeader(props) {
             </span>
           )}
         </ul>
-      </div>
+      </h3>
     </div>
   );
 }

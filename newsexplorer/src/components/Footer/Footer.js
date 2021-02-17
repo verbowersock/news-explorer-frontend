@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__copyright">
+      <p className="footer__copyright">
         © 2020 Supersite, Powered by News API
-      </div>
+      </p>
       <div className="footer__links-container">
         <Link
           className="footer__link footer__link_text footer__link_text_home"

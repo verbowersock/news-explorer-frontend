@@ -28,7 +28,7 @@
   }
   @media screen and (max-width: 490px) {
     .newsCardList {
-      grid-template-columns: repeat(1, 224px);
+      grid-template-columns: repeat(1, 288px);
     }
   }
   

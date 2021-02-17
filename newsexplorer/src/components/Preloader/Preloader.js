@@ -5,7 +5,7 @@ function Preloader(props) {
   return (
     <div className="preloader">
       <img className="preloader__image" src={loader} alt="loader" />
-      <div className="preloader__text">Searching for news...</div>
+      <p className="preloader__text">Searching for news...</p>
     </div>
   );
 }

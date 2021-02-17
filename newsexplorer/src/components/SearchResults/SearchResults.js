@@ -16,7 +16,7 @@ function SearchResults(props) {
     <NotFound />
   ) : (
     <div className="results">
-      <h1 className="results__title">Search Results</h1>
+      <h3 className="results__title">Search Results</h3>
       <NewsCardList
         cards={props.cards.slice(0, itemsToShow)}
         onSaveClick={props.onSaveClick}

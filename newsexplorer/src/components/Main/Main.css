@@ -5,9 +5,10 @@
   
   .main__background {
     border: 1px solid transparent;
-    background-image: url("../../images/georgia.png");
+    background-image: url("../../images/georgia-720.png");
     width: 100%;
     background-size: cover;
+    background-position:center;
     height: 576px;
     background-repeat: no-repeat;
     margin-top: -80px;
@@ -85,6 +86,9 @@
   
     .main__subheading {
       width: 285px;
+    }
+    .main__background {
+      background-position:center bottom;
     }
   }
   
