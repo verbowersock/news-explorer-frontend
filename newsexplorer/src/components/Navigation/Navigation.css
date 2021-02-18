@@ -1,0 +1,166 @@
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  margin-left: auto;
+}
+
+.navigation__button {
+  color: white;
+  font-family: "Roboto Regular";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  padding: 30px 10px 25px 10px;
+  margin: 0 55px 0 0;
+  background-color: rgb(0, 0, 0, 0);
+  text-decoration: none;
+}
+
+.navigation__button_active {
+  border-bottom: 3px solid white;
+}
+
+.navigation__button_active_black {
+  border-bottom: 3px solid black;
+}
+
+.navigation__button_login {
+  border: 1px solid white;
+  border-radius: 100px;
+  max-height: 48px;
+  width: 176px;
+  margin: 19px 0 0;
+  padding: 0 10px 0 10px;
+  box-sizing: border-box;
+}
+
+.navigation__button_signout {
+  height: 48px;
+  width: 112px;
+  border-radius: 100px;
+  border: 1px solid #1a1b22;
+  margin: 19px 0 0;
+  box-sizing: border-box;
+  color: black;
+  display: flex;
+  padding: 0 19px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__button_signout_white {
+  border: 1px solid #ffffff;
+  color: white;
+}
+
+.navigation__button_white {
+  color: white;
+}
+
+.navigation__button_black {
+  color: black;
+}
+
+.navigation__button_hidden {
+  visibility: hidden;
+}
+
+.navigation__signout {
+  height: 24px;
+  width: 24px;
+}
+
+.navigation__signout_white {
+  height: 24px;
+  width: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation {
+    height: 66px;
+  }
+
+  .navigation__button {
+    padding: 24px 10px 10px 10px;
+    height: 30px;
+    margin-right: 32px;
+    font-size: 16px;
+  }
+
+  .navigation__button_login {
+    width: 152px;
+    height: 40px;
+    padding: 0 15px 0;
+    margin-top: 14px;
+    margin-right: 0;
+  }
+
+  .navigation__button_signout {
+    width: 100px;
+    height: 40px;
+    padding: 0 15px 0;
+    margin-top: 14px;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 732px) {
+  .navigation__button {
+    margin-right: 20px;
+    padding-left: 0;
+  }
+  .navigation__button_signout {
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .navigation_mobile {
+    height: auto;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 30px;
+  }
+  .navigation__button {
+    width: 150px;
+    text-align: left;
+    color: white;
+  }
+  .navigation__button_active {
+    border: none;
+  }
+  .navigation__button_signout {
+    width: 100px;
+    height: 40px;
+    padding: 0 15px 0;
+    margin-top: 14px;
+    margin-right: 0;
+    border-color: white;
+  }
+  .navigation__button_login {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navigation__button {
+    font-size: 437;
+  }
+}
+
+@media only screen and (max-width: 437px) {
+  .navigation__button_login {
+    width: 288px;
+    height: 56px;
+  }
+  .navigation__button_signout {
+    width: 100px;
+    height: 56px;
+  }
+  .navigation_mobile {
+    padding-left: 16px;
+  }
+}

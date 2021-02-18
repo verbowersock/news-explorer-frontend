@@ -1,0 +1,34 @@
+.newsCardList {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    column-gap: 16px;
+    row-gap: 21px;
+    padding: 0;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 1232px;
+  }
+  
+  @media screen and (max-width: 1280px) {
+    .newsCardList {
+      grid-template-columns: repeat(2, 400px);
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .newsCardList {
+      grid-template-columns: repeat(3, 224px);
+      row-gap: 8px;
+      column-gap: 8px;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .newsCardList {
+      grid-template-columns: repeat(2, 224px);
+    }
+  }
+  @media screen and (max-width: 490px) {
+    .newsCardList {
+      grid-template-columns: repeat(1, 288px);
+    }
+  }
+  

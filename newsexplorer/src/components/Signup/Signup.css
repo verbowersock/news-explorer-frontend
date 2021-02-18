@@ -1,0 +1,15 @@
+.popup__save_signup {
+  margin: 0 0 16px;
+}
+
+.popup__input-error_centered {
+  width: 200px;
+  text-align: center;
+  margin: 17px auto 8px;
+}
+
+@media screen and (max-width: 514px) {
+.popup__save_signup {
+  margin: 16px auto;
+}
+}
