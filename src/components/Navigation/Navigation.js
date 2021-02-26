@@ -5,13 +5,10 @@ import LogoutWhite from "../../images/logout_white.svg";
 import React from "react";
 
 function Navigation(props) {
-  console.log(props);
 
   function handleSignout(event) {
     props.onSignOut(event);
   }
-
-  console.log(props.mobileMenuOpen);
 
   const mobile = props.mobile ? "mobile" : "";
 
@@ -65,7 +62,7 @@ function Navigation(props) {
           }`}
           onClick={handleSignout}
         >
-          Elise
+         <span className="navigation__button_username"> {props.userName}</span>
           <img
             src={
               props.location.pathname === "/" || props.mobile

@@ -3,8 +3,12 @@ import React from "react";
 import Navigation from "../Navigation/Navigation";
 import { Link } from "react-router-dom";
 import NavigationMobile from "../NavigationMobile/NavigationMobile";
+import { CurrentUserContext } from '../../contexts/CurrentUserContext'
 
 function Header(props) {
+
+  const currentUser = React.useContext(CurrentUserContext)
+
   return (
     <header
       className={`header header_${
@@ -30,6 +34,7 @@ function Header(props) {
           onClose={props.onClose}
           onAnyClick={props.onAnyClick}
           mobile={props.mobile}
+          userName = {currentUser &&currentUser.name}
         />
       ) : (
         <Navigation
@@ -40,6 +45,7 @@ function Header(props) {
           onSignOut={props.onSignOut}
           onAnyClick={props.onAnyClick}
           mobileMenuOpen={props.mobileMenuOpen}
+          userName = {currentUser &&currentUser.name}
         />
       )}
       {props.mobile && (

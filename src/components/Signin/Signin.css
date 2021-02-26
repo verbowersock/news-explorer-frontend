@@ -87,9 +87,13 @@
   color: white;
   text-align: center;
   border: none;
-  margin: 43px 0 16px;
+
   caret-color: #2f71e5;
   }
+
+.popup__save_signin {
+  margin: 15px 0 16px;
+}
   
 .popup__save:disabled {
   background: #e6e8eb;

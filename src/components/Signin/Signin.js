@@ -58,6 +58,9 @@ function Signin(props) {
         maxLength={200}
         onChange={handlePasswordChange}
       />
+      <p className="popup__input-error popup__input-error_centered">
+        {props.errors.result}
+      </p>
       <button
         className="popup__save popup__save_signin"
         aria-label="Sign in"

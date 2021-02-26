@@ -12,8 +12,8 @@ function SearchResults(props) {
     setExpanded(true);
   }
 
-  return props.cards.length === 0 ? (
-    <NotFound />
+  return props.cards.length === 0 && props.errorMessage !==""? (
+    <NotFound errorMessage = {props.errorMessage}/>
   ) : (
     <div className="results">
       <h3 className="results__title">Search Results</h3>
