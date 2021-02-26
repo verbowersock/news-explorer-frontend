@@ -2,7 +2,6 @@ import "./NotFound.css";
 import notFound from "../../images/not-found_v1.svg";
 
 function NotFound(props) {
-  console.log(props.errorMessage)
   return (
     <div className="notFound">
       <img className="notFound__image" src={notFound} alt="not found" />
