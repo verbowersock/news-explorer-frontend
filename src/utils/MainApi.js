@@ -121,7 +121,7 @@ export const mainApi = new MainApi({
   
  //   token: "f5a77f977ae84d9fad3d0965995624c2",
  
- baseUrl:"https://api.vbnews.students.nomoreparties.site"
+ baseUrl:"https://api.vknews.students.nomoreparties.site"
     }
   );
 
