@@ -1,9 +1,9 @@
 import "./NewsCard.css";
 import React from "react";
+import { Markup } from 'interweave';
 
 function NewsCard(props) {
   const [toolTipVisibility, setToolTipVisibility] = React.useState(false);
-  console.log(toolTipVisibility);
   function handleSaveClick() {
     props.onSaveClick(props.card);
   }
@@ -59,13 +59,13 @@ function NewsCard(props) {
             : "newsCard__callout_hidden"
         }`}
       >
-        {props.card.tag}
+        {props.card.keyword}
       </div>
       <div className="newsCard__content">
         <div className="newsCard__date">{props.card.date}</div>
         <div className="newsCard__title">{props.card.title}</div>
 
-        <div className="newsCard__text">{props.card.text}</div>
+        <div className="newsCard__text"><Markup content={props.card.text}/></div>
         <div className="newsCard__source">{props.card.source}</div>
       </div>
     </div>

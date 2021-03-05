@@ -29,7 +29,7 @@ function Signup(props) {
         props.userName === "" ||
         props.errors.email !== "" ||
         props.errors.password !== "" ||
-        props.errors.userName !== ""
+        props.errors.result !== ""
     );
   }, [props]);
 
@@ -80,7 +80,7 @@ function Signup(props) {
         onChange={handleUsernameChange}
       />
       <p className="popup__input-error popup__input-error_centered">
-        {props.errors.userName}
+        {props.errors.result}
       </p>
       <button
         className="popup__save popup__save_signup"

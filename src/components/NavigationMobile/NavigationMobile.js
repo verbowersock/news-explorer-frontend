@@ -3,12 +3,16 @@ import "../Header/Header.css";
 import Navigation from "../Navigation/Navigation";
 import { Link } from "react-router-dom";
 import React from "react";
+import { CurrentUserContext } from '../../contexts/CurrentUserContext'
+
+ 
 
 function NavigationMobile(props) {
-  console.log(props);
+
   function handleClose() {
     props.onClose();
   }
+  const currentUser = React.useContext(CurrentUserContext)
   return (
     <div
       className={`mobile-menu mobile-menu_${
@@ -34,6 +38,7 @@ function NavigationMobile(props) {
           onAnyClick={props.onAnyClick}
           mobile={props.mobile}
           color={props.color}
+          userName = {currentUser &&currentUser.name}
         />
       </div>
     </div>

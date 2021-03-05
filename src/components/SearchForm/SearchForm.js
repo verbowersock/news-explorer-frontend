@@ -25,11 +25,13 @@ function SearchForm(props) {
 
   return (
     <form className="search-form">
+     
       <input
         className="search-form__input"
         placeholder="Enter topic"
         onChange={handleSearchChange}
       />
+
       <button
         type="input"
         className="search-form__submit"
@@ -40,7 +42,9 @@ function SearchForm(props) {
       >
         Search
       </button>
+      
     </form>
+    
   );
 }
 

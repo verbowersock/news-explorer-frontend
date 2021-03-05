@@ -8,12 +8,14 @@ function SearchResults(props) {
   const [expanded, setExpanded] = React.useState(false);
 
   function handleShowMoreClick() {
-    setItemsToShow(props.cards.length);
+    setItemsToShow(itemsToShow+3);
+    if (itemsToShow === props.cards.length){
     setExpanded(true);
+    }
   }
 
-  return props.cards.length === 0 ? (
-    <NotFound />
+  return props.cards.length === 0 && props.errorMessage !==""? (
+    <NotFound errorMessage = {props.errorMessage}/>
   ) : (
     <div className="results">
       <h3 className="results__title">Search Results</h3>
@@ -26,7 +28,7 @@ function SearchResults(props) {
       />
       <button
         className={`results__show-more${
-          expanded === false && props.cards.length > 3 ? "" : "_hidden"
+          expanded === false && props.cards.length > itemsToShow ? "" : "_hidden"
         }`}
         onClick={handleShowMoreClick}
       >

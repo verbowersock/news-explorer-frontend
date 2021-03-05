@@ -48,9 +48,14 @@
   box-sizing: border-box;
   color: black;
   display: flex;
-  padding: 0 19px 0;
+  padding: 0 13px 0;
   justify-content: space-between;
   align-items: center;
+}  
+
+.navigation__button_username{
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .navigation__button_signout_white {
@@ -73,6 +78,7 @@
 .navigation__signout {
   height: 24px;
   width: 24px;
+  margin-left: 10px;
 }
 
 .navigation__signout_white {
@@ -113,9 +119,6 @@
     margin-right: 20px;
     padding-left: 0;
   }
-  .navigation__button_signout {
-    padding-left: 15px;
-  }
 }
 @media screen and (max-width: 620px) {
   .navigation_mobile {
@@ -135,7 +138,7 @@
   .navigation__button_signout {
     width: 100px;
     height: 40px;
-    padding: 0 15px 0;
+    padding: 0 10px 0;
     margin-top: 14px;
     margin-right: 0;
     border-color: white;

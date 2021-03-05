@@ -4,7 +4,12 @@ import SearchForm from "../SearchForm/SearchForm";
 import SearchResults from "../SearchResults/SearchResults";
 import Preloader from "../Preloader/Preloader";
 
+
+
 function Main(props) {
+
+
+
   return (
     <main className="main">
       <div className="main__background">
@@ -22,6 +27,7 @@ function Main(props) {
           onSaveClick={props.onSaveClick}
           loggedIn={props.loggedIn}
           location={props.location}
+          errorMessage={props.errorMessage}
         />
       )}
     </main>
