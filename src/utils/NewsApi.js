@@ -24,7 +24,7 @@ getNews(request, to, from) {
 }    
 
 export const newsApi = new NewsApi({
-    baseUrl: "https://newsapi.org/v2/",
+    baseUrl: "https://nomoreparties.co/news/v2/",
     token: "f5a77f977ae84d9fad3d0965995624c2",
  
 // baseUrl:"http://localhost:3000"
