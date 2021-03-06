@@ -218,6 +218,7 @@ function App() {
             setShowResults(true);
             compareArticles(cards, savedCards);
             setShowPreloader(false);
+            setErrorMessage("")
             localStorage.setItem("cards", JSON.stringify(cards));
           } else {
             throw Error(data.statusText);

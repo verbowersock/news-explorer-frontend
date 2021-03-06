@@ -14,7 +14,7 @@ function SearchResults(props) {
     }
   }
 
-  return props.cards.length === 0 && props.errorMessage !==""? (
+  return props.cards.length === 0 || props.errorMessage !==""? (
     <NotFound errorMessage = {props.errorMessage}/>
   ) : (
     <div className="results">

@@ -23,9 +23,9 @@ function NewsCard(props) {
   function handleDelete() {
     props.onDelete(props.card);
   }
-
+console.log(props.card)
   return (
-    <div className="newsCard">
+    <div className="newsCard" >
       <div
         className="newsCard__image"
         style={{ backgroundImage: `url(${props.card.image})` }}
@@ -63,7 +63,7 @@ function NewsCard(props) {
       </div>
       <div className="newsCard__content">
         <div className="newsCard__date">{props.card.date}</div>
-        <div className="newsCard__title">{props.card.title}</div>
+        <a href={props.card.link} target='blank'  className="newsCard__title">{props.card.title}</a>
 
         <div className="newsCard__text"><Markup content={props.card.text}/></div>
         <div className="newsCard__source">{props.card.source}</div>
