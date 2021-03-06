@@ -28,7 +28,7 @@ function SavedNewsHeader(props) {
       <h2 className="saved-news-header__counter">
         {props.currentUser.name}, you have {props.cards.length} saved articles
       </h2>
-      <h3 className="saved-news-header__keywords">
+      <h3 className={`saved-news-header__keywords saved-news-header__keywords_${props.cards.length===0?"hidden":""}`}>
         By keywords:
         <ul className="saved-news-header__keywords_items">
           {sortedTags.slice(0, itemsToDisplay).map((item, i, arr) => (

@@ -69,6 +69,10 @@
     margin-right: 6px;
     text-transform: capitalize;
   }
+
+  .saved-news-header__keywords_hidden {
+    display: none;
+  }
   
   @media screen and (max-width: 1280px) {
     .saved-news-header {

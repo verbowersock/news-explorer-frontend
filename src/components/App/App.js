@@ -220,6 +220,7 @@ function App() {
             setShowPreloader(false);
             setErrorMessage("")
             localStorage.setItem("cards", JSON.stringify(cards));
+           
           } else {
             throw Error(data.statusText);
           }
@@ -239,7 +240,7 @@ function App() {
   function handleSaveClick(card) {
     if (!loggedIn) {
       return;
-    } else if (card.saved) {
+    } else if (card.saved===true || card.saved===undefined) {
       handleDeleteCard(card);
     } else {
       mainApi
@@ -258,6 +259,8 @@ function App() {
         });
     }
   }
+
+
   function findSavedCards(token) {
     mainApi
       .getSavedArticles(token)
@@ -278,8 +281,7 @@ function App() {
           obj.text === srcObj.text
       );
       if (tarObj) {
-        cards[i].saved = tarObj.true;
-        cards[i]._id = tarObj._id;
+       cards[i]=tarObj
       }
     }
 
