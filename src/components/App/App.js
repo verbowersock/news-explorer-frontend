@@ -237,7 +237,6 @@ function App() {
   }
 
   function handleSaveClick(card) {
-
     if (!loggedIn) {
       return;
     } else if (card.saved) {
