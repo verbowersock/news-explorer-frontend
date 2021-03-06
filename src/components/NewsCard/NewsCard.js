@@ -23,7 +23,7 @@ function NewsCard(props) {
   function handleDelete() {
     props.onDelete(props.card);
   }
-console.log(props.card)
+
   return (
     <div className="newsCard" >
       <div

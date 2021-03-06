@@ -58,6 +58,10 @@
   right: 0px;
 }
 
+.search-form__submit:focus {
+  outline:none;
+}
+
 @media screen and (max-width: 768px) {
   .search-form {
     margin-top: 48px;
