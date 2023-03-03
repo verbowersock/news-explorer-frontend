@@ -1,2 +1,2 @@
 Front end for Practicum final project.
-Address: https://explorenews.herokuapp.com/
+Address: https://news-explorer-vb.onrender.com/
