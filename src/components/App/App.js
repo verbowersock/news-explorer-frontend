@@ -29,9 +29,8 @@ function App() {
     result: "",
   });
   const [signinButtonDisabled, setSigninButtonDisabled] = React.useState(false);
-  const [isConfirmationPopupOpen, setIsConfirmationPopupOpen] = React.useState(
-    false
-  );
+  const [isConfirmationPopupOpen, setIsConfirmationPopupOpen] =
+    React.useState(false);
   const [showResults, setShowResults] = React.useState(false);
   const [showPreloader, setShowPreloader] = React.useState(false);
   const [cards, setCards] = React.useState([]);
@@ -45,6 +44,7 @@ function App() {
   const localCards = JSON.parse(localStorage.getItem("cards"));
   const token = localStorage.getItem("token");
   const [currentUser, setCurrentUser] = React.useState(null);
+  const [loading, setLoading] = React.useState(false);
 
   React.useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
@@ -113,6 +113,7 @@ function App() {
 
   function handleSignup(event) {
     event.preventDefault();
+    setLoading(true);
     mainApi
       .register(userEmail, userPassword, userName)
       .then((res) => {
@@ -129,14 +130,17 @@ function App() {
         setIsConfirmationPopupOpen(true);
         setIsSignupPopupOpen(false);
         clearFieldsErrors();
+        setLoading(false);
       })
       .catch((err) => {
+        setLoading(false);
         console.log(err);
       });
   }
 
   function handleSignin(event) {
     event.preventDefault();
+    setLoading(true);
     mainApi
       .signIn(userEmail, userPassword)
       .then((res) => {
@@ -153,11 +157,15 @@ function App() {
         setLoggedIn(true);
         setIsSigninPopupOpen(false);
         clearFieldsErrors();
+        setLoading(false);
       })
       .then(() => {
         history.push("/");
       })
-      .catch((err) => console.log(err.message));
+      .catch((err) => {
+        console.log(err.message);
+        setLoading(false);
+      });
   }
 
   function validateFields() {
@@ -218,9 +226,8 @@ function App() {
             setShowResults(true);
             compareArticles(cards, savedCards);
             setShowPreloader(false);
-            setErrorMessage("")
+            setErrorMessage("");
             localStorage.setItem("cards", JSON.stringify(cards));
-           
           } else {
             throw Error(data.statusText);
           }
@@ -240,7 +247,7 @@ function App() {
   function handleSaveClick(card) {
     if (!loggedIn) {
       return;
-    } else if (card.saved===true || card.saved===undefined) {
+    } else if (card.saved === true || card.saved === undefined) {
       handleDeleteCard(card);
     } else {
       mainApi
@@ -259,7 +266,6 @@ function App() {
         });
     }
   }
-
 
   function findSavedCards(token) {
     mainApi
@@ -281,7 +287,7 @@ function App() {
           obj.text === srcObj.text
       );
       if (tarObj) {
-       cards[i]=tarObj
+        cards[i] = tarObj;
       }
     }
 
@@ -391,6 +397,7 @@ function App() {
               validate={validateFields}
               errors={error}
               onSubmit={handleSignin}
+              loading={loading}
             />
             <Signup
               userEmail={userEmail}
@@ -405,6 +412,7 @@ function App() {
               onLinkClick={handleSigninLinkClick}
               errors={error}
               onSubmit={handleSignup}
+              loading={loading}
             />
             <Confirmation
               isOpen={isConfirmationPopupOpen}

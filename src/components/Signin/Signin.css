@@ -12,9 +12,9 @@
   height: 33px;
   background-color: rgb(255, 255, 255);
   margin: 0 0 3px;
-  padding: 0;
-  }
-  
+  padding: 0 0 0 5px;
+}
+
 .popup__field_label {
   font-family: Inter;
   font-size: 12px;
@@ -26,7 +26,7 @@
   color: #2f71e5;
   margin: 0;
 }
-  
+
 .popup__field::placeholder {
   font-family: Inter;
   font-style: normal;
@@ -36,7 +36,7 @@
   color: #000000;
   opacity: 0.2;
 }
-  
+
 .popup__input-error {
   font-family: Inter;
   font-size: 12px;
@@ -51,7 +51,7 @@
   padding: 0;
   margin: 0 0 13px;
 }
-  
+
 .popup__link {
   font-family: "Inter";
   font-size: 14px;
@@ -65,12 +65,13 @@
 
 .popup__link_text {
   color: #2f71e5;
+  cursor: pointer;
 }
-  
+
 .popup__link:visited {
   color: #ffffff;
-  }
-  
+}
+
 .popup__save {
   height: 64px;
   width: 360px;
@@ -87,14 +88,14 @@
   color: white;
   text-align: center;
   border: none;
-
+  cursor: pointer;
   caret-color: #2f71e5;
-  }
+}
 
 .popup__save_signin {
   margin: 15px 0 16px;
 }
-  
+
 .popup__save:disabled {
   background: #e6e8eb;
   font-family: Roboto;
@@ -108,17 +109,31 @@
   box-shadow: none;
 }
 
+.spinner {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
-  
-@media screen and (max-width: 550px) {
-  .popup__save {
-     width: 280px;
-     height: 40px;
-     padding: 0;
-     margin-top: 23px;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
-  
+
+@media screen and (max-width: 550px) {
+  .popup__save {
+    width: 280px;
+    height: 40px;
+    padding: 0;
+    margin-top: 23px;
+  }
+}
+
 @media screen and (max-width: 380px) {
   .popup__save {
     width: 246px;
@@ -127,7 +142,7 @@
     margin-top: 18px;
   }
 }
-  
+
 @media screen and (max-width: 550px) {
   .popup__field {
     margin-left: 27px;
@@ -135,7 +150,7 @@
     width: 275px;
   }
 }
-  
+
 @media screen and (max-width: 380px) {
   .popup__field {
     margin-left: 18px;
@@ -144,8 +159,8 @@
     font-size: 12px;
   }
 }
-  
-  @media screen and (max-width: 514px) {
+
+@media screen and (max-width: 514px) {
   .popup__field {
     width: 100%;
     margin-left: 0;
@@ -158,4 +173,3 @@
     display: block;
   }
 }
-  

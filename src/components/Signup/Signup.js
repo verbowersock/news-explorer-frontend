@@ -2,11 +2,11 @@ import React from "react";
 import PopupWithForm from "../PopupWithForm/PopupWithForm.js";
 import "./Signup.css";
 import "../Signin/Signin.css";
+import { ReactComponent as Loader } from "../../images/spinner.svg";
 
 function Signup(props) {
-  const [isSubmitButtonDisabled, setIsSubmitButtonDisabled] = React.useState(
-    true
-  );
+  const [isSubmitButtonDisabled, setIsSubmitButtonDisabled] =
+    React.useState(true);
 
   const handleEmailChange = (e) => {
     props.setUserEmail(e.target.value);
@@ -89,7 +89,7 @@ function Signup(props) {
         disabled={isSubmitButtonDisabled}
         onClick={props.onSubmit}
       >
-        Sign up
+        {!props.loading ? "Sign up" : <Loader className="spinner" />}
       </button>
       <div className="popup__link">
         or{" "}
